@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nadir Latif Butt — Portfolio</title>
+  <meta name="description" content="Portfolio of Nadir Latif Butt — BS Computer Science student at University of Lahore, aspiring Data Scientist & AI/ML Engineer." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-logo"></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="{{ url_for('static', filename='images/hero-bg.png') }}" alt="Background" />
+    </div>
+    <div class="hero-particles"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          Open to Internship Opportunities
+        </div>
+        <h1 class="hero-name">
+          <span class="gradient-text">Hi, I'm Nadir Latif Butt</span>
+        </h1>
+        <p class="hero-description">
+          A BS Computer Science student passionate about Data Science, AI & Machine Learning. 
+          I build intelligent solutions with Python, work with data using SQL, 
+          and craft modern web &amp; mobile applications.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            View My Work
+          </a>
+          <a href="/download-cv" class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download CV
+          </a>
+        </div>
+        <div class="hero-social">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/nadir-latif-butt-2939982b8/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <!-- GitHub -->
+          <a href="https://github.com/nado123-coder123" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <!-- Email -->
+          <a href="mailto:nadirbutt0101@gmail.com" class="social-link" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+          <!-- Phone -->
+          <a href="tel:+923284594969" class="social-link" aria-label="Phone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-image-glow"></div>
+        <div class="hero-image-wrapper">
+          <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Nadir Latif Butt" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT / CV ============ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="reveal">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">A driven CS student with a passion for AI, data, and building impactful solutions.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm <strong>Nadir Latif Butt</strong>, a BS Computer Science student at the 
+            <strong>University of Lahore</strong>, currently heading into my 7th semester. 
+            My interests lie at the intersection of <strong>Data Science</strong>, 
+            <strong>Artificial Intelligence</strong>, and <strong>Machine Learning</strong> — 
+            where I love turning raw data into actionable insights and intelligent systems.
+          </p>
+          <p>
+            Beyond data and AI, I have hands-on experience in game development with Unity &amp; C#, 
+            and I build modern web and mobile applications using React.js and Flutter. 
+            I thrive in leadership roles — whether it's leading my Final Year Project team, 
+            heading university group projects, or volunteering with Hope Society Pakistan.
+          </p>
+          <p>
+            I'm currently working as an <strong>ML Intern at Shaukat Khanum Memorial Cancer Hospital's 
+            Research Department</strong>, applying machine learning to real-world healthcare challenges.
+          </p>
+          <div class="about-stats reveal-children">
+            <div class="stat-card glass-card">
+              <div class="stat-number">2+</div>
+              <div class="stat-label">Internships</div>
+            </div>
+            <div class="stat-card glass-card">
+              <div class="stat-number">7+</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-card glass-card">
+              <div class="stat-number">3</div>
+              <div class="stat-label">Languages Spoken</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-cv-card glass-card reveal">
+          <div class="cv-info">
+            <h3>Technical Skills</h3>
+            <p>
+              A versatile skill set spanning data science, web/mobile development, 
+              and game development.
+            </p>
+          </div>
+          <h4 style="color:var(--text-secondary);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;">Programming Languages</h4>
+          <div class="cv-skills reveal-children">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Dart (Flutter)</span>
+            <span class="skill-tag">HTML / CSS</span>
+            <span class="skill-tag">Assembly (COAL)</span>
+          </div>
+          <h4 style="color:var(--text-secondary);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;margin-top:20px;">Frameworks & Tools</h4>
+          <div class="cv-skills reveal-children">
+            <span class="skill-tag">React.js</span>
+            <span class="skill-tag">Flutter</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">Unity</span>
+          </div>
+          <h4 style="color:var(--text-secondary);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;margin-top:20px;">Core Concepts</h4>
+          <div class="cv-skills reveal-children" style="margin-bottom:32px;">
+            <span class="skill-tag">OOP</span>
+            <span class="skill-tag">Data Structures</span>
+            <span class="skill-tag">Algorithms</span>
+            <span class="skill-tag">Machine Learning</span>
+            <span class="skill-tag">Data Analysis</span>
+          </div>
+          <a href="/download-cv" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="reveal">
+        <h2 class="section-title">Experience</h2>
+        <p class="section-subtitle">My professional journey — internships, research, and community impact.</p>
+      </div>
+      <div class="timeline">
+
+        <!-- Experience 1: ML Intern (Current) -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-date">Jul 2026 — Present</span>
+            <h3>Machine Learning Intern</h3>
+            <p class="company">Shaukat Khanum Memorial Cancer Hospital — Research Dept.</p>
+            <p>Working on applied machine learning projects within the research department, contributing to healthcare-driven data analysis and predictive modeling initiatives at one of Pakistan's leading cancer research institutions.</p>
+          </div>
+        </div>
+
+        <!-- Experience 2: Game Dev Intern -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-date">Jul 2025 — Sep 2025</span>
+            <h3>Game Development Intern</h3>
+            <p class="company">Draco Arts</p>
+            <p>Developed interactive game experiences using <strong>C#</strong> and <strong>Unity</strong>. Collaborated with artists and designers to implement gameplay mechanics, UI systems, and optimize performance for smooth user experiences.</p>
+          </div>
+        </div>
+
+        <!-- Experience 3: Hope Society Ambassador -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-date">Oct 2025 — Present</span>
+            <h3>Campus Ambassador → Volunteer</h3>
+            <p class="company">Hope Society Pakistan</p>
+            <p>Served as a <strong>Campus Ambassador</strong> from October 2025 to March 2026, driving awareness campaigns and organizing events. Transitioned to an active <strong>Volunteer</strong> role, continuing to support community outreach and social welfare initiatives.</p>
+          </div>
+        </div>
+
+        <!-- Experience 4: Leadership -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-date">2023 — Present</span>
+            <h3>Team & Project Leader</h3>
+            <p class="company">University of Lahore</p>
+            <p>Led multiple university group projects across various courses, coordinating teams and ensuring timely delivery. Currently serving as <strong>FYP Team Leader</strong>, guiding the final year project from ideation through implementation.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="reveal">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">Highlighted work from my GitHub — explore my code and contributions.</p>
+      </div>
+      <div class="projects-grid reveal-children">
+
+        <!-- Project 1: NGO Smart Aid (React) -->
+        <div class="project-card glass-card">
+          <div class="project-body" style="height: 100%; display: flex; flex-direction: column;">
+            <div class="project-tags">
+              <span class="project-tag">React.js</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">HTML5</span>
+              <span class="project-tag">CSS3</span>
+            </div>
+            <h3>NGO Smart Aid (React)</h3>
+            <ul style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px; padding-left: 18px;">
+              <li>Rebuilt the NGO website using React.js with reusable and modular components.</li>
+              <li>Enhanced application scalability and maintainability through component-based architecture.</li>
+              <li>Improved navigation and overall user experience with a modern frontend design.</li>
+            </ul>
+            <div class="project-links" style="margin-top: auto;">
+              <a href="https://github.com/nado123-coder123/NGO-Smart-aid-React" target="_blank" rel="noopener" class="project-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: EchoSync -->
+        <div class="project-card glass-card">
+          <div class="project-body" style="height: 100%; display: flex; flex-direction: column;">
+            <div class="project-tags">
+              <span class="project-tag">Flutter</span>
+              <span class="project-tag">Dart</span>
+            </div>
+            <h3>EchoSync</h3>
+            <ul style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px; padding-left: 18px;">
+              <li>Developed a cross-platform mobile application using Flutter and Dart.</li>
+              <li>Designed responsive mobile interfaces optimized for Android devices.</li>
+              <li>Implemented Flutter widgets and navigation to deliver a smooth user experience.</li>
+            </ul>
+            <div class="project-links" style="margin-top: auto;">
+              <a href="https://github.com/nado123-coder123/EchoSync-flutter" target="_blank" rel="noopener" class="project-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Hotel Management System -->
+        <div class="project-card glass-card">
+          <div class="project-body" style="height: 100%; display: flex; flex-direction: column;">
+            <div class="project-tags">
+              <span class="project-tag">C++</span>
+              <span class="project-tag">Data Structures</span>
+              <span class="project-tag">File Handling</span>
+            </div>
+            <h3>Hotel Management System</h3>
+            <ul style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px; padding-left: 18px;">
+              <li>Developed a hotel management system for room booking, customer management, and booking records.</li>
+              <li>Implemented Data Structures including linked lists and stacks for efficient data organization.</li>
+              <li>Utilized file handling to store and retrieve persistent records.</li>
+            </ul>
+            <div class="project-links" style="margin-top: auto;">
+              <a href="https://github.com/nado123-coder123/-Hotel-Management-System-DSA" target="_blank" rel="noopener" class="project-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Cafeteria Management System -->
+        <div class="project-card glass-card">
+          <div class="project-body" style="height: 100%; display: flex; flex-direction: column;">
+            <div class="project-tags">
+              <span class="project-tag">C++</span>
+              <span class="project-tag">OOP</span>
+              <span class="project-tag">File Handling</span>
+            </div>
+            <h3>Cafeteria Management System</h3>
+            <ul style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px; padding-left: 18px;">
+              <li>Built a cafeteria management application using Object-Oriented Programming principles.</li>
+              <li>Implemented menu management, order processing, and billing functionalities.</li>
+              <li>Applied classes, objects, inheritance, and file handling for efficient data management.</li>
+            </ul>
+            <div class="project-links" style="margin-top: auto;">
+              <a href="https://github.com/nado123-coder123/Cafeteria-system-OOP-" target="_blank" rel="noopener" class="project-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 5: Triangle Analyzer -->
+        <div class="project-card glass-card">
+          <div class="project-body" style="height: 100%; display: flex; flex-direction: column;">
+            <div class="project-tags">
+              <span class="project-tag">C++</span>
+              <span class="project-tag">Arrays</span>
+              <span class="project-tag">Sorting Algorithms</span>
+            </div>
+            <h3>Triangle Analyzer & Sorting System</h3>
+            <ul style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px; padding-left: 18px;">
+              <li>Developed a console-based application to classify triangles and perform sorting operations.</li>
+              <li>Implemented modular programming using functions and arrays.</li>
+              <li>Applied multiple sorting algorithms to organize and analyze datasets.</li>
+            </ul>
+            <div class="project-links" style="margin-top: auto;">
+              <a href="https://github.com/nado123-coder123/Triangle-Analyzer-and-Sorting-System-PF" target="_blank" rel="noopener" class="project-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Departmental Store -->
+        <div class="project-card glass-card">
+          <div class="project-body" style="height: 100%; display: flex; flex-direction: column;">
+            <div class="project-tags">
+              <span class="project-tag">C++</span>
+              <span class="project-tag">Structures</span>
+              <span class="project-tag">File Handling</span>
+            </div>
+            <h3>Departmental Store Database System</h3>
+            <ul style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px; padding-left: 18px;">
+              <li>Designed a departmental store management system for maintaining product and customer records.</li>
+              <li>Implemented CRUD operations using structures, arrays, and file handling.</li>
+              <li>Improved data organization and retrieval through efficient record management.</li>
+            </ul>
+            <div class="project-links" style="margin-top: auto;">
+              <a href="https://github.com/nado123-coder123/Departmental-Store-Database-System-" target="_blank" rel="noopener" class="project-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7: NGO Smart Aid (HTML) -->
+        <div class="project-card glass-card">
+          <div class="project-body" style="height: 100%; display: flex; flex-direction: column;">
+            <div class="project-tags">
+              <span class="project-tag">HTML5</span>
+              <span class="project-tag">CSS3</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <h3>NGO Smart Aid (HTML)</h3>
+            <ul style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px; padding-left: 18px;">
+              <li>Developed a responsive NGO website to showcase services including donations, scholarships, and interest-free loan programs.</li>
+              <li>Designed an intuitive user interface using HTML, CSS, and JavaScript for improved user experience.</li>
+              <li>Implemented responsive layouts and interactive web components.</li>
+            </ul>
+            <div class="project-links" style="margin-top: auto;">
+              <a href="https://github.com/nado123-coder123/NGO-Smart-Aid-HTML" target="_blank" rel="noopener" class="project-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="education" id="education">
+    <div class="container">
+      <div class="reveal">
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">My academic foundation in computer science.</p>
+      </div>
+      <div class="education-card glass-card reveal" style="padding:40px;max-width:700px;">
+        <div style="display:flex;align-items:flex-start;gap:24px;">
+          <div style="flex-shrink:0;width:60px;height:60px;border-radius:var(--radius-md);background:rgba(99,102,241,0.1);display:flex;align-items:center;justify-content:center;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
+          </div>
+          <div>
+            <h3 style="font-size:1.4rem;font-weight:700;margin-bottom:4px;">University of Lahore</h3>
+            <p style="color:var(--accent-3);font-weight:600;margin-bottom:8px;">BS Computer Science</p>
+            <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:16px;">
+              <span style="font-size:0.85rem;color:var(--text-muted);font-family:var(--font-mono);">
+                📍 Lahore, Pakistan
+              </span>
+              <span style="font-size:0.85rem;color:var(--text-muted);font-family:var(--font-mono);">
+                🎓 Expected Graduation: Jun 2027
+              </span>
+            </div>
+            <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.7;">
+              Currently in the 7th semester. Coursework includes Data Structures, Algorithms, OOP, Database Systems, 
+              Machine Learning, Artificial Intelligence, Computer Architecture, and Software Engineering.
+            </p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;">
+              <span class="skill-tag">FYP Team Leader</span>
+              <span class="skill-tag">6 Semesters Completed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Languages Spoken -->
+      <div class="reveal" style="margin-top:48px;">
+        <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:20px;color:var(--text-primary);">Languages I Speak</h3>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;">
+          <div class="glass-card" style="padding:20px 32px;text-align:center;">
+            <div style="font-weight:600;font-size:0.95rem;">English</div>
+            <div style="font-size:0.8rem;color:var(--text-muted);">Professional</div>
+          </div>
+          <div class="glass-card" style="padding:20px 32px;text-align:center;">
+            <div style="font-weight:600;font-size:0.95rem;">Urdu</div>
+            <div style="font-size:0.8rem;color:var(--text-muted);">Native</div>
+          </div>
+          <div class="glass-card" style="padding:20px 32px;text-align:center;">
+            <div style="font-weight:600;font-size:0.95rem;">Punjabi</div>
+            <div style="font-size:0.8rem;color:var(--text-muted);">Native</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="reveal">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle" style="margin-left:auto;margin-right:auto;text-align:center;">
+          Looking for a Data Science / AI / ML intern? Let's connect!
+        </p>
+      </div>
+      <div class="contact-card glass-card reveal">
+        <h3>Let's Build Something Great</h3>
+        <p>
+          Whether you have an internship opportunity, a collaboration idea, or just want to connect — 
+          I'd love to hear from you. Feel free to reach out through any channel below.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:nadirbutt0101@gmail.com" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            nadirbutt0101@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/nadir-latif-butt-2939982b8/" target="_blank" rel="noopener" class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/nado123-coder123" target="_blank" rel="noopener" class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            GitHub
+          </a>
+          <a href="tel:+923284594969" class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Me
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Nadir Latif Butt. Crafted with passion from Lahore, Pakistan.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
